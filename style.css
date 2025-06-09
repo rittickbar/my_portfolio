@@ -1,0 +1,715 @@
+ /* Style the fixed sidebar */
+        .sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 280px;
+          padding: 2rem 1rem;
+          display: flex;
+         flex-direction: column;
+         transition: transform 0.3s ease;
+         z-index: 1000;
+         background-color: #343a40;
+			  background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%);
+        }
+        .sidebar h2 {
+          margin: 0 0 2rem 0;
+          font-weight: 700;
+          font-size: 1.5rem;
+          /*text-transform: uppercase;*/
+          letter-spacing: 2px;
+        }
+        .sidebar a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+           background: linear-gradient(to right, #ff0066 0%, #660033 100%);
+        }
+
+        /* Content area style */
+        .content {
+          margin-left: 280px;
+          padding: 2rem;
+          transition: margin-left 0.3s ease;
+          min-height: 100vh;
+          border: none;
+          outline: none;
+        }
+
+        .section {
+            display: none;
+            animation: fadeInContent 0.6s ease forwards;
+        }
+        .section.active {
+          display: block;
+        }
+        .hamburger {
+          position: fixed;
+          top: 1rem;
+          left: 1rem;
+          width: 30px;
+          height: 22px;
+          cursor: pointer;
+          z-index: 1100;
+          display: none;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .hamburger div {
+          height: 4px;
+          background-color: #fff;
+          border-radius: 2px;
+          transition: all 0.4s ease;
+          transform-origin: center;
+        }
+      /* Hamburger transform when open -> cross */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: transform 0.3s ease;
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: transform 0.3s ease;
+}
+
+/* Add base transition for hamburger lines */
+.hamburger div {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Sidebar hidden state for mobile */
+.sidebar.hide {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.show {
+  transform: translateX(0);
+}
+
+/* Content fullwidth when sidebar is hidden */
+.content.fullwidth {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+      
+		body{
+		background: radial-gradient(circle, #3399ff, #ff9999 );
+    height: 100%; /* Make sure the gradient covers the entire page */
+    margin: 0; /* Remove default margin */
+		}
+		.animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: fadeInUp 1.2s ease forwards;
+    display: inline-block;
+}
+.animated-text1{
+  font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: fadeInUp 1.2s ease forwards;
+    display: inline-block;
+}
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInContent {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;
+    padding: 1.5rem 1rem;
+   box-shadow: 2px 0 7px rgba(0,0,0,0.5);
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  .content {
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .container1 {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .logo1, .logo2, .logo3, .logo4 {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo1:hover,
+  .logo2:hover,
+  .logo3:hover,
+  .logo4:hover {
+    width: 56px;
+    height: 56px;
+  }
+
+  .label {
+    font-size: 0.875rem;
+  }
+  .download-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    width: 100%; /* Make it full width for mobile */
+    display: block;
+    margin: 10px auto;
+}
+
+/*.image-box {
+    background-color: radial-gradient(circle, #3399ff, #d00d7c );
+    box-shadow: 0 0 10px 3px rgba(255, 0, 153, 0.6); 
+    border: 5px solid #d00d7c; 
+    border-radius: 70%; 
+} */
+
+.round-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 180px;
+    display: block;
+    margin-right: 80%;
+    /*margin: 0 auto;*/
+}
+
+.typing-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.typing-text {
+    font-size: 18px;
+    width: 100%; /* Ensure it scales properly */
+}
+
+.circle-text {
+  font-size: 10px;
+}
+
+.progress-container {
+  flex-direction: column;
+  height: auto;
+  margin-bottom:20px;
+  overflow: auto;
+}
+/*.progress-ring{
+width: 200px;
+height: 200px;
+}*/
+
+
+.animated-text1{
+  font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: fadeInUp 1.2s ease forwards;
+    flex-direction: column;
+}
+.animated-text-slide-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Shift all content to the left */
+}
+
+.animated-text-slide-left > div {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100%;
+}
+
+.progress {
+  width: 100% !important;
+  margin-bottom: 10px;
+  margin-left: 0 !important;
+}
+
+.progress-bar {
+  font-size: 14px;
+  text-align: left; /* Optional: left-align text inside bars too */
+  padding-left: 5px;
+}
+.progre {
+  width: 100%; /* or any suitable width like 90% */
+  height: auto; /* optional: adjust as needed */
+}
+/*Section 3 */
+.box { 
+  width: 90%;
+  height: auto;
+  padding: 30px 20px;
+  font-size: 1.2rem;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 10px;
+}
+
+.container2 {
+  margin-top: auto;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  height: auto;
+}
+#sec2{
+  font-size: 14px;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+/*
+.animated-text-slide-left {
+  font-size: 1rem;
+  text-align: left;
+  display: block;
+  margin: 0.5rem 0;
+}*/
+}
+.animated-text-slide-left {
+     display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    /*cursor: pointer;*/
+    position: relative;
+    overflow: hidden;
+}
+.animated-text-slide-left::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffd700;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.animated-text-slide-left:hover::after {
+  transform: translateX(0);
+}
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.download-btn {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #003399;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    text-transform: camelcase;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.download-btn:hover {
+     background: linear-gradient(to right, #ff0066 0%, #660033 100%);
+}
+.image-box {
+    display: inline-block;
+    padding: 50px;
+    border: 5px solid #0066ff; /* Blue border around the image */
+    border-radius: 70%; /* Round corners for the border */
+    background-color: radial-gradient(circle, #3399ff, #ff9999 ); /* Optional: Adds background inside the border */
+    box-shadow: 0 0 15px 5px rgba(0, 103, 255, 0.8); /* Glowing effect */
+	 margin-left: 60%;
+	 margin-bottom:-8%;
+	 position:relative;
+}
+
+/* Style for the rounded image */
+.round-image {
+    width: 210px; /* Set the size of the image */
+    height: 240px; /* Make sure the height and width are equal for the round shape */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+/* Container for the typing text */
+.typing-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Typing effect */
+.typing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* White text color */
+    display: inline-block;
+    overflow: hidden; /* Ensures that the text stays hidden until it's typed */
+    white-space: nowrap; /* Ensures the text does not wrap */
+    border-right: 2px solid #0066ff; /* Adds a cursor-like effect */
+    width: 0; /* Start with width 0 */
+    animation: typing 3s steps(30, end) 1s forwards, blink 0.75s step-end infinite 1s; /* Typing, blinking */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+.typing-text:after {
+    content: ''; /* Empty content to simulate a cursor */
+    display: inline-block;
+    width: 2px; /* Width of the cursor */
+    height: 100%; /* Match the text height */
+    background-color:  transparent; /* Cursor color */
+    animation: blinkCursor 0.75s step-end infinite, stopCursor 3s forwards;
+}
+
+/* Blinking cursor animation */
+@keyframes blinkCursor {
+    50% {
+        background-color: transparent;
+    }
+}
+
+/* Stop blinking after the typing is finished */
+@keyframes stopCursor {
+    to {
+        background-color: transparent ; /* Keep the cursor visible without blinking */
+    }
+}
+.normal{
+	color:White;
+	font-size:15px;
+	margin-right:60%;
+	position:left;
+}
+/*.progre{
+	Width:650px;
+	height:200px;
+	background:linear-gradient(to bottom, #66ccff 0%, #ff99cc 100%);
+	display:block;
+}*/
+.progress-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+	  margin-bottom:20px;
+	  
+    }
+
+    .progress-ring {
+      transform: rotate(0deg); /* Rotates to start from the top */
+    }
+
+    .circle {
+      fill: none;
+      stroke-width: 20;
+    }
+
+    .circle-bg {
+      stroke: #e6e6e6;
+    }
+
+    .circle-progress {
+      stroke: url(#gradient); /* Use the gradient for the stroke */
+      stroke-dasharray: 440; /* Circumference of the circle (2 * Math.PI * radius) */
+      stroke-dashoffset: 110; /* Adjust this to show the progress */
+      transition: stroke-dashoffset 1s;
+    }
+
+    .circle-text {
+      font-size: 12px;
+      fill: white;
+	  text-align:center;
+	  justify-content: center;
+	  font-weight:bold;
+    }
+.circle-progres{
+	stroke: url(#gradient); /* Use the gradient for the stroke */
+      stroke-dasharray: 440; /* Circumference of the circle (2 * Math.PI * radius) */
+      stroke-dashoffset: 95; /* Adjust this to show the progress */
+      transition: stroke-dashoffset 1s;
+}
+.circle-progre{
+	stroke: url(#gradient); /* Use the gradient for the stroke */
+      stroke-dasharray: 440; /* Circumference of the circle (2 * Math.PI * radius) */
+      stroke-dashoffset: 120; /* Adjust this to show the progress */
+      transition: stroke-dashoffset 1s;
+}
+/*For linkdin logo and other logo*/
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+  }
+  a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5));
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .logo1{
+    width: 64px;
+    height: 64px;
+    fill: #fff;
+  }
+  .logo1:hover{
+    background: #00c6ff;
+  background: linear-gradient(
+    to right,
+    #00c6ff,#0072ff
+  );
+  width: 74px;
+    height: 74px;
+  }
+  .logo2{
+    width: 74px;
+    height: 74px;
+    fill: #fff;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+  .logo2:hover{
+    background-color: #333;
+    transform: scale(1.2);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5));
+    cursor: pointer;
+  }
+  .logo3{
+    width: 64px;
+    height: 64px;
+    fill: #fff;
+  }
+  .logo3:hover{
+    background-color: rgb(10,102,194);
+    transform: scale(1.2);
+    width: 74px;
+    height: 74px;
+  }
+  .logo4{
+    width: 74px;
+    height: 74px;
+    fill: #fff;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+    filter: drop-shadow(0 4px 6px #c71610);
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+  .logo4:hover{
+    background-color:#c71610;
+    transform: scale(1.2);
+    width: 74px;
+    height: 74px;
+    cursor: pointer;
+  }
+  .label {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none;
+  }
+  .container1 {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  /*Section3 box */
+  .container2 {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  .box {
+    height: 250px;
+    width: 250px;
+    padding: 50px 80px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #0066ff 0%, #ff0066 100%);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+   display: flex;              /* Enable flex layout */
+    flex-direction: row;        /* Row direction */
+    align-items: center;        /* Vertical alignment */
+    justify-content: center;    /* Horizontal alignment */
+    gap: 10px;                  /* Optional spacing between children */
+  }
+  .box::before {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(90deg, #00ff00, #00ffff, #0000ff, #ff00ff, #00ff00);
+    border-radius: 28px; /* 24px + 4px to cover the border area */
+    z-index: -1;
+  
+    /* Make it act like a border */
+    mask:
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out; /* for Safari */
+  
+    padding: 7px; /* border thickness */
+  
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: glow 6s linear infinite;
+  }
+  
+  .box:hover::before {
+    opacity: 1;
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg) blur(8px);
+    }
+    100% {
+      filter: hue-rotate(360deg) blur(8px);
+    }
+  }
+    h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px; /* adjust as needed */
+      font-weight: bold;
+      background: linear-gradient(90deg, #00ff00, #00ffff, #0000ff, #ff00ff, #00ff00);
+      background-size: 400% 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    
+      animation: glowText 6s linear infinite;
+    }
+    @keyframes glowText {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+    h4:hover{
+      color: white;
+    }
+    #sec2{
+      font-size: 17px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: white;
+      
+    }
+    #sec2:hover{
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px; /* adjust as needed */
+      font-weight: bold;
+      background: linear-gradient(90deg, #00ff00, #00ffff, #0000ff, #ff00ff, #00ff00);
+      background-size: 400% 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    
+      animation: glowText 6s linear infinite;
+    }
+    h5{
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+    }
+    h5:hover{
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(90deg, #00ff00, #00ffff, #0000ff, #ff00ff, #00ff00);
+      background-size: 400% 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    
+      animation: glowText 6s linear infinite;
+    }
+
+  
+  
