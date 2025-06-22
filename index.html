@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar with Dynamic Content</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hamburger" id="hamburger" aria-label="Toggle sidebar" role="button" tabindex="0">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="sidebar" id="sidebar" role="navigation" aria-label="Sidebar navigation"><br>
+        <h2 class="text-white text-center"><div class="animated-text">Portfolio</div></h2>
+        <a href="#" onclick="showContent('section1');return false;"><div class="animated-text-slide-left">Menu</div></a>
+        <a href="#" onclick="showContent('section2');return false;"><div class="animated-text-slide-left">About</div></a>
+        <a href="#" onclick="showContent('section3');return false;"><div class="animated-text-slide-left">Service</div></a>
+		 <a href="#" onclick="showContent('section4');return false;"><div class="animated-text-slide-left">Skills</div></a>
+		  <a href="#" onclick="showContent('section5');return false;"><div class="animated-text-slide-left">Project</div></a>
+		   <a href="#" onclick="showContent('section6');return false;"><div class="animated-text-slide-left">Contact</div></a>
+    </div>
+
+   <main class="content" id="content" role="main"><br>
+  <section id="section1" class="section active" tabindex="0" aria-label="Menu Section"><br>
+            <div class="typing-container">
+        <p class="typing-text">Hello,It's Me<br>Rittick Bar<br>And I'm a FrontEnd & BackEnd Developer</p>
+	<p class="normal">I am a Web Designer and expertise is to<br> create and Web Design,Fontend,BackEnd and many more</p>
+			 <div class="image-box">
+        <img src="1741805017566.jpg" alt="Profile Picture" class="round-image">
+    </div><br><br><br>
+				<a href="Rittick Bar My Resume 08.06 upload_040733.pdf" download="rittick_resume.pdf">
+            <button class="download-btn">Download Resume</button>
+        </a>
+      </section>
+      <section id="section2" class="section" tabindex="0" aria-label="About Section"><br>
+        <main>
+          <h1>My Education</h1>
+          <section class="education-grid" aria-label="Education details">
+            <article class="education-box" tabindex="0">
+              <h2>B.Sc Honours in Geography</h2>
+              <p>Completed graduation in Geography (B.Sc Honours) in 2018.</p>
+            </article>
+            <article class="education-box" tabindex="0">
+              <h2>M.Sc in Geography</h2>
+              <p>Successfully completed M.Sc in Geography in 2020.</p>
+            </article>
+            <article class="education-box" tabindex="0">
+              <h2>Programming Course</h2>
+              <p>Attended Ramakrishna Mission ShilpaMandira Computer Center (Jun 2023 to Aug 2025). 
+              Learned languages and technologies such as C#.Net, ASP.Net, JavaScript, HTML5, CSS, Bootstrap, Tailwind CSS, React.js, Node.js, PHP, and more.</p>
+            </article>
+            <article class="education-box" tabindex="0">
+              <h2>O Level IT Course</h2>
+              <p>Successfully completed O Level IT Course from NIELIT.</p>
+            </article>
+          </section>
+        </main>
+      </section>
+      <section id="section3" class="section" tabindex="0" aria-label="Service Section"><br>
+        <div class="boxes-wrapper" role="list" aria-label="Three boxes with logo, description and buttons">
+          <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+            <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+              <img src="images.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+            </div>
+            <p>Responsive Website through HTML &CSS & JS</p>
+           <!-- <div class="button-group" role="group" aria-label="Box 1 action buttons">
+              <button type="button" aria-pressed="false">
+                <span class="material-icons" aria-hidden="true"></span><a href="">Live</a>
+              </button>
+              <button type="button" aria-pressed="false">
+                <span class="material-icons" aria-hidden="true"></span><a href="https://github.com/rittick8582/C-.NET-PROJECT.git">Git_code</a>
+              </button> -->
+            </div>
+            <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+              <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+                <img src="pngimg.com - wordpress_PNG72.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+              </div>
+              <p>WordPress Website</p>
+          </div>
+          <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+            <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+              <img src="pngimg.com - php_PNG34.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+            </div>
+            <p>PHP Website</p>
+        </div>
+        <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+          <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+            <img src="1797007.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+          </div>
+          <p>ASP.Net Website</p>
+      </div>
+      <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+        <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+          <img src="react-icon-512x512-u6e60ayf.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+        </div>
+        <p>React Website</p>
+    </div>
+        </div>
+        </section>
+        <section id="section4" class="section" tabindex="0" aria-label="Skills Section"><br><br>
+		 <h2 class="text-white text-center"><div class="animated-text1">Technical Skills</div></h2>
+		 <center>
+		<div class="progre"><br><br>
+		 <div class="animated-text-slide-left">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 85%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">HTML5 85%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 65%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">CSS 65%</div>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 50%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">JavaScript 50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;margin-left: 20px;">
+    <div class="progress-bar" style="width: 70%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">ASP.NET 70%</div>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 75%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">C#.NET 75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 75%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">PHP 75%</div>
+  </div> 
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 75%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">Bootstrap 75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 60%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">Tailwind CSS 60%</div>
+  </div> 
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 55%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">React JS 55%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 60%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">Node JS 60%</div>
+  </div> 
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 75%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">Git & GitHub 75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+    <div class="progress-bar" style="width: 70%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">SQL Database  70%</div>
+  </div> 
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+      <div class="progress-bar" style="width: 75%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">MYSQL Database 75%</div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 250px; height: 20px;">
+      <div class="progress-bar" style="width: 85%; height: 100%; background: linear-gradient(to right, #ff0066 0%, #660033 100%); color: white;">WordPress 85%</div>
+    </div>
+  </div>
+        </div>
+		</div><br><br>
+    <h2 class="text-white text-center"><div class="animated-text1">Professional Skills</div></h2>
+		<div class="progress-container">
+    <svg width="200" height="200" class="progress-ring">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff0066; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#660033; stop-opacity:1" />
+        </linearGradient>
+      </defs>
+
+      <circle cx="75" cy="75" r="60" class="circle circle-bg" />
+      <circle cx="75" cy="75" r="60" class="circle circle-progress" />
+      <text x="20" y="85" class="circle-text">English_Speaking_75%</text> <!-- Change the percentage here -->
+    </svg>
+	 <svg width="200" height="200" class="progress-ring">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff0066; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#660033; stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <circle cx="75" cy="75" r="60" class="circle circle-bg" />
+      <circle cx="75" cy="75" r="60" class="circle circle-progres" />
+      <text x="20" y="85" class="circle-text">English_Writting_85%</text> <!-- Change the percentage here -->
+    </svg>
+	<svg width="200" height="200" class="progress-ring">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff0066; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#660033; stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <circle cx="75" cy="75" r="60" class="circle circle-bg" />
+      <circle cx="75" cy="75" r="60" class="circle circle-progre" />
+      <text x="20" y="85" class="circle-text">Communication_70%</text> <!-- Change the percentage here -->
+    </svg>
+  </div>
+		</section>
+		<section id="section5" class="section" tabindex="0" aria-label="Project Section"><br>
+      <div class="boxes-wrapper" role="list" aria-label="Three boxes with logo, description and buttons">
+        <div class="container-box" tabindex="0" role="listitem" aria-label="Box 1 with logo and action buttons">
+          <div class="logo-placeholder" aria-label="Logo placeholder for Box 1">
+            <img src="c-sharp-logo.png" alt="Logo placeholder, blue background with white text reading Logo 1" />
+          </div>
+          <p>School Management System Project</p>
+          <div class="button-group" role="group" aria-label="Box 1 action buttons">
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="">Live</a>
+            </button>
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://github.com/rittick8582/C-.NET-PROJECT.git">Git_code</a>
+            </button>
+          </div>
+        </div>
+        <div class="container-box" tabindex="0" role="listitem" aria-label="Box 2 with logo and action buttons">
+          <div class="logo-placeholder" aria-label="Logo placeholder for Box 2">
+            <img src="Java-logo-icon-1.png" alt="Logo placeholder, teal background with black text reading Logo 2" />
+          </div>
+          <p>Online Bank Management System</p>
+          <div class="button-group" role="group" aria-label="Box 2 action buttons">
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://rittickbar.github.io/java-project/">Live</a>
+            </button>
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://github.com/rittick8582/java-project">Git_code</a>
+            </button>
+          </div>
+        </div>
+        <div class="container-box" tabindex="0" role="listitem" aria-label="Box 3 with logo and action buttons">
+          <div class="logo-placeholder" aria-label="Logo placeholder for Box 3">
+            <img src="1797007.png" alt="Logo placeholder, amber background with black text reading Logo 3" />
+          </div>
+          <p>Online Library Management System project</p>
+          <div class="button-group" role="group" aria-label="Box 3 action buttons">
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="#">Live</a>
+            </button>
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://github.com/rittick8582/ASP.NET-PROJECT.git">Git_code</a>
+            </button>
+          </div>
+        </div>
+        <div class="container-box" tabindex="0" role="listitem" aria-label="Box 3 with logo and action buttons">
+          <div class="logo-placeholder" aria-label="Logo placeholder for Box 3">
+            <img src="images.png" alt="Logo placeholder, amber background with black text reading Logo 3" />
+          </div>
+          <p>Portfolio project</p>
+          <div class="button-group" role="group" aria-label="Box 3 action buttons">
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://rittickbar.github.io/my_portfolio/">Live</a>
+            </button>
+            <button type="button" aria-pressed="false">
+              <span class="material-icons" aria-hidden="true"></span><a href="https://github.com/rittick8582/my_portfolio.git">Git_code</a>
+            </button>
+          </div>
+        </div>
+      </div>
+       </section>
+       <section id="section6" class="section" tabindex="0" aria-label="Contact Section"><br>
+      <div class="container1" role="navigation" aria-label="Social Media Links"><br>
+        <!-- Facebook -->
+        <a href="https://m.facebook.com/rittick.bar/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg class="logo1" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M22.675 0h-21.35c-.73 0-1.325.595-1.325 1.325v21.351c0 
+                     .73.595 1.324 1.325 1.324h11.494v-9.294h-3.124v-3.622h3.124v-2.672c0-3.097 
+                     1.892-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.919.001c-1.504 
+                     0-1.796.715-1.796 1.763v2.311h3.59l-.467 3.622h-3.123v9.294h6.116c.73 0 
+                     1.325-.595 1.325-1.324v-21.35c0-.73-.595-1.325-1.325-1.325z"/>
+          </svg>
+          <div class="label">Facebook</div>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/rittick8582" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="logo2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 
+                     11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 
+                     1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.304.76-1.604-2.665-.3-5.466-1.332-5.466-5.93 
+                     0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 
+                     11.5 0 0 1 3-.403c1.02.005 2.045.138 3 
+                     .403 2.29-1.552 3.296-1.23 3.296-1.23.655 
+                     1.653.243 2.873.12 3.176.77.84 1.234 1.91 
+                     1.234 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.823 
+                     1.102.823 2.222 0 1.606-.014 2.896-.014 
+                     3.286 0 .32.216.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <div class="label">GitHub</div>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/rittick-bar-151ba4242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="logo3" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.849-3.037-1.849 
+                     0-2.132 1.445-2.132 2.939v5.667H9.361V9h3.414v1.561h.049c.476-.9 
+                     1.637-1.849 3.37-1.849 3.602 0 4.267 2.37 4.267 5.453v6.287zM5.337 
+                     7.433c-1.144 0-2.07-.927-2.07-2.07 0-1.143.926-2.07 2.07-2.07 
+                     1.143 0 2.07.927 2.07 2.07 0 1.143-.927 2.07-2.07 2.07zm1.777 
+                     13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 
+                     1.727v20.545C0 23.227.792 24 1.771 24h20.451c.978 0 1.778-.773 
+                     1.778-1.727V1.727C24 .774 23.203 0 22.225 0z"/>
+          </svg>
+          <div class="label">LinkedIn</div>
+        </a>
+        <!-- Gmail -->
+        <a href="rittickbar1997@gmail.com" aria-label="Gmail">
+          <svg class="logo4" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.8 4H3.2C2.54 4 2 4.54 2 5.2v13.6c0 .66.54 1.2 
+                     1.2 1.2h17.6c.66 0 1.2-.54 1.2-1.2V5.2c0-.66-.54-1.2-1.2-1.2zM20 7.55l-8 
+                     6.15-8-6.15V6.8l8 6.15 8-6.15v.75z"/>
+          </svg>
+          <div class="label">Gmail</div>
+        </a>
+      </div>
+        </section>
+        </main>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="portfolio.js"></script>
+
+</body>
+</html>
